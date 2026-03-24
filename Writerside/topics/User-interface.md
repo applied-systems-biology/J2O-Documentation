@@ -16,7 +16,7 @@ J2O will load its content dynamically depending on the file you select at the to
   <img src="FileSelectionSection.png" alt="FileSelectionSection.png"/>
 </p>
 
-J2O will automatically offer you all .jip files and RO-Crates that are accessible by your OMERO groups. If you have none available, you can upload files as attachments to any of your projects or datasets. To do so, select a dataset or project and go to <b>General → Attachments</b> in the right panel. Click the <b>+</b> to attach a file. To ensure compatibility, be sure to follow the [*Preparing JIPipe workflows* section](WorkflowDesign.md).
+J2O will automatically offer you all .jip files and RO-Crates that are accessible by your OMERO groups. If you have none available, you can upload files as attachments to any of your projects or datasets. To do so, select a dataset or project and go to <b>General → Attachments</b> in the right panel. Click the <b>+</b> to attach a file. To ensure compatibility, be sure to follow the [*Preparing JIPipe workflows* section](WorkflowDesign.topic).
 
 <p align="center">
   <img src="AttachFiles.png" alt="Attach_JIP_File.png"/>
@@ -32,7 +32,7 @@ You can also click on the name of a workflow to open a pop-up window that will d
 ![Live log pop-up](LogPopUp.png)
 
 ## NODE SUMMARY
-In this section you will find an overview of the nodes detected in the associated workflow file. This can be used as a debugging tool to see whether the JIPipe pipeline was constructed correctly according to the [*Preparing JIPipe workflows* section](WorkflowDesign.md) and J2O therefore automatically detects the right amount of nodes.
+In this section you will find an overview of the nodes detected in the associated workflow file. This can be used as a debugging tool to see whether the JIPipe pipeline was constructed correctly according to the [*Preparing JIPipe workflows* section](WorkflowDesign.topic) and J2O therefore automatically detects the right amount of nodes.
 
 ![Node summary section](NodeSummarySection.png)
 

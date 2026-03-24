@@ -23,7 +23,7 @@
 
         <!--    Add up to 2 topics that you want to promote. Use the "bagde", "image", or "icon" attribute to set an icon.    -->
         <spotlight>
-            <card href="WorkflowDesign.md" badge="creative" summary="Learn how to prepare your JIPipe workflows for J2O">Supported workflow designs</card>
+            <card href="WorkflowDesign.topic" badge="creative" summary="Learn how to prepare your JIPipe workflows for J2O">Supported workflow designs</card>
             <card href="User-interface.md" badge="search" summary="Learn how to use J2O to run your prepared JIPipe workflows in the OMERO webclient">User interface</card>
         </spotlight>
 

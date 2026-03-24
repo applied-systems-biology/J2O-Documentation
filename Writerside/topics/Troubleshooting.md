@@ -53,7 +53,7 @@ omero config set omero.web.jipipe.logdir path/to/owned/directory
 
 ## User directories are not set up correctly
 
-A warning will be displayed if the user directories are not set up as described in the [workflow preparation guide](WorkflowDesign.md). If you ignore the warnings and execute the workflow there may be multiple possible issues.
+A warning will be displayed if the user directories are not set up as described in the [workflow preparation guide](WorkflowDesign.topic). If you ignore the warnings and execute the workflow there may be multiple possible issues.
 
 ### Solution 1: Change the key value of user directories
 
