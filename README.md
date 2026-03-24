@@ -2,7 +2,7 @@
 
 JIPipe to OMERO (J2O) is a plugin for [omero-web](https://github.com/ome/omero-web) that makes it possible to run [JIPipe](https://jipipe.hki-jena.de/) workflows directly on the server that is hosting the OMERO database. This eliminates the need for users to share their data and workflows outside of OMERO and greatly reduces the data traffic.
 
-This repository is used to host [the J2O documentation website](https://example.com/).
+This repository is used to host [the J2O documentation website](https://applied-systems-biology.github.io/J2O-Documentation/overview.html).
 
 ## License & Attribution
 Marius Wank, Ruman Gerst, Marc Thilo Figge
