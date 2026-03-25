@@ -24,7 +24,7 @@
         <!--    Add up to 2 topics that you want to promote. Use the "bagde", "image", or "icon" attribute to set an icon.    -->
         <spotlight>
             <card href="Installation.topic" badge="start" summary="Start here if you are a system administrator">Learn how to install J2O</card>
-            <card href="User-interface.md" badge="computer" summary="Start here if you are an OMERO user">Learn how to use J2O</card>
+            <card href="User-guide.topic" badge="computer" summary="Start here if you are an OMERO user">Learn how to use J2O</card>
         </spotlight>
 
     <primary>

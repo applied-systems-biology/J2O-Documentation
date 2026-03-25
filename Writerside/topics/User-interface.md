@@ -2,9 +2,7 @@
 
 If installed correctly, the J2O tab can be found in the right panel of the OMERO webclient:
 
-<p align="center">
-  <img src="RightPanelTab.png" alt="TabPanel.png"/>
-</p>
+![Right panel tab](RightPanelTab.png)
 
 Below you will find a detailed explanation of the interface sections you will see when opening the plugin.
 
@@ -12,15 +10,11 @@ Below you will find a detailed explanation of the interface sections you will se
 
 J2O will load its content dynamically depending on the file you select at the top of this section. When checking **Enable output config**, the [output node configuration](#output-node-configuration) will be accessible.
 
-<p align="center">
-  <img src="FileSelectionSection.png" alt="FileSelectionSection.png"/>
-</p>
+![File selection section](FileSelectionSection.png)
 
 J2O will automatically offer you all .jip files and RO-Crates that are accessible by your OMERO groups. If you have none available, you can upload files as attachments to any of your projects or datasets. To do so, select a dataset or project and go to <b>General → Attachments</b> in the right panel. Click the <b>+</b> to attach a file. To ensure compatibility, be sure to follow the [*Preparing JIPipe workflows* section](WorkflowDesign.topic).
 
-<p align="center">
-  <img src="AttachFiles.png" alt="Attach_JIP_File.png"/>
-</p>
+![File attachments](AttachFiles.png) {width="500"}
 
 ## RUNNING JOBS
 In this section you will find a list of all the JIPipe jobs currently running on the server that were initiated by the current user. They can be identified by the time and date of execution and the name of the associated workflow file. By clicking the ✖ next to the entry, you can terminate the associated job after confirming this action.
@@ -29,7 +23,7 @@ In this section you will find a list of all the JIPipe jobs currently running on
 
 You can also click on the name of a workflow to open a pop-up window that will display a live stream of its logfile:
 
-![Live log pop-up](LogPopUp.png)
+![Live log pop-up](LogPopUp.png){width="700"}
 
 ## NODE SUMMARY
 In this section you will find an overview of the nodes detected in the associated workflow file. This can be used as a debugging tool to see whether the JIPipe pipeline was constructed correctly according to the [*Preparing JIPipe workflows* section](WorkflowDesign.topic) and J2O therefore automatically detects the right amount of nodes.
@@ -62,6 +56,6 @@ Below the start button, you will find the log window. The window will livestream
 
 The log window will only ever display the content of the log file from the most recent job started by the user. To review old log files or to inspect errors of jobs that ran in the background, you can find the log files under the attachment tab of the output dataset. By clicking on the file, an automated download will be started.
 
-![Old log files](FindLogFiles.png)
+![Old log files](FindLogFiles.png){width="600"}
 
 > If you have multiple jobs running you can always inspect the log livestream of a specific job by clicking its name in the [*Running Jobs* section](#running-jobs).
