@@ -41,6 +41,6 @@ meaningful processing power. Without this processing power, the execution of you
 plugin is not worth using. We therefore advertise building OMERO servers with at least some middle-class hardware for
 processing.
 
-If you are a system administrator that is worried about the stability of the OMERO server when used for processing, 
+If you are a system administrator that is worried about the stability of the OMERO server when used for processing, we have got you covered.
 J2O also supports resource management via Celery and podman to make sure a fraction of the resources stay
-reserved for the operation of the database.
+reserved for the operation of the database. Check out the [resource management options](Optional-settings.md#resource-management) provided in the settings of the plugin.

@@ -22,6 +22,8 @@
         </toc-element>
         <toc-element topic="User-interface.md"/>
     </toc-element>
+    <toc-element topic="Frequently-asked-questions.md"/>
     <toc-element topic="Troubleshooting.md"/>
+
 
 </instance-profile>

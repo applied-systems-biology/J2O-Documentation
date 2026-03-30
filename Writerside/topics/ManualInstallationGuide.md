@@ -74,6 +74,8 @@ Should you wish to terminate the workers associated with the plugin, simply run 
 celery -A JIPipePlugin control shutdown
 ```
 
+> If you want to control the resources used by J2O, don't forget to [set the concurrency flag when starting the worker](Optional-settings.md#task-concurrency).
+
 ### Step 8 - Restart omero web
 Restart [omero-web](https://github.com/ome/omero-web) for the changes to take effect:
 ```bash
@@ -83,4 +85,4 @@ omero web restart
 ### After the installation
 The J2O plugin should now be available in the OMERO webclient. To check if everything is functioning, first check if the J2O tab appears in the right panel of the webclient. After that, start a small demo workflow to see if Celery, redis and podman are functioning as expected.
 
-> If there should be any problems, check the [troubleshooting page](Troubleshooting.md). If you can't find your issue there, feel free to contact us or open an issue in the [community](https://image.sc).
+> If there should be any problems, check the [troubleshooting page](Troubleshooting.md). If you can't find your issue there, feel free to contact us or open an issue in the [community](https://image.sc). You can also check the [FAQ section](Frequently-asked-questions.md) to see if your question has already been answered.

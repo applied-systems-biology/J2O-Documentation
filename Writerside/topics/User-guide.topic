@@ -29,7 +29,7 @@
 
         <primary>
             <title>Useful reads</title>
-            <a href="Installation.topic" summary="Check the installation guide for system administrators">J2O not installed?</a>
+            <a href="Frequently-asked-questions.md" summary="Check the FAQ to see if your question has already been answered">Still got questions?</a>
             <a href="Troubleshooting.md" summary="Check the troubleshooting page">Getting errors?</a>
         </primary>
 
