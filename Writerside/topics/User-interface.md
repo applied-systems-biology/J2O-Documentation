@@ -49,8 +49,13 @@ Below this section you will find the **Start J2O** button to execute the selecte
 
 ![Parameter config section](ParameterConfigSection.png)
 
+## WARNINGS & ERRORS
+To make warnings and errors clearly visible, a yellow warning box above and a red error box below the **Start J2O** button will be displayed if anything is out of order.
+
+![Warnings and Errors](Warnings&Errors.png)
+
 ## LOG WINDOW
-Below the start button, you will find the log window. The window will livestream the JIPipe logfile of the most recently started workflow execution. This can be used to check on the progress of the execution or to debug problems within the workflow. Any additional information will also be displayed here. For example, if an error occurs a helpful message will tell you what went wrong.
+Below the start button, you will find the log window. The window will livestream the JIPipe logfile of the most recently started workflow execution. This can be used to check on the progress of the execution or to debug problems within the workflow.
 
 ![Log window section](LogWindowSection.png)
 
