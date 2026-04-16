@@ -1,8 +1,12 @@
-# Reference parameters
+# Make your workflow editable
 
 If you want to allow your users to modify the parameters of a workflow from within the OMERO webclient before executing it, you will need to create reference parameters. 
 
-To do so, first navigate to the project overview. On the right panel, you will find References in the parameter tab:
+> Note that complex parameters are **NOT** supported.
+> Read the [section below](#complex-parameters) to learn more.
+{style="note"}
+
+To create a reference parameter, first navigate to the project overview. On the right panel, you will find References in the parameter tab:
 
 ![References](../images/assets/images/ReferenceParameters.png){width="700"}
 
@@ -10,4 +14,19 @@ After clicking on References, create a group if you have not done so before usin
 
 ![References customization](../images/assets/images/ReferenceCustomization.png){width="700"}
 
-> Note that complex parameters are not supported to be edited by users. J2O will give you a warning if your workflow is using a complex parameters.
+## Complex parameters
+Certain parameters in JIPipe have a unique data structure, making a general integration impossible. 
+
+
+> If you do add a complex parameter to your references anyway, 
+> J2O will **NOT** give the user an option to change its value.  
+{style="note"}
+
+
+A parameter is considered complex when it has multiple input fields. You can recognize this after adding a parameter
+to the references:
+
+![Complex parameter example](ComplexParameter.png)
+
+> The average object diameter parameter of the Cellpose prediction node
+> has a checkbox and a numeric input field and is therefore considered **complex**.

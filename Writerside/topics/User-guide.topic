@@ -29,6 +29,7 @@
 
         <primary>
             <title>Useful reads</title>
+            <a href="Uploading-workflows-to-OMERO.md" summary="Learn how to upload your workflow via the OMERO webclient">Uploading workflows</a>
             <a href="Frequently-asked-questions.md" summary="Check the FAQ to see if your question has already been answered">Still got questions?</a>
             <a href="Troubleshooting.md" summary="Check the troubleshooting page">Getting errors?</a>
         </primary>
