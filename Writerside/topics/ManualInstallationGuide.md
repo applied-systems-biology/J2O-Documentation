@@ -2,9 +2,10 @@
 
 If you had troubles with the assisted installation or want to have a better overview of what operations are performed, this page will help you.
 
-This plugin assumes that [omero-web](https://github.com/ome/omero-web) has been set up as described in its [documentation](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment).
+This plugin assumes that OMERO has been **set up for Ubuntu** as described in its [documentation](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html).
 
-> Note that these commands should be run in your [omero-web](https://github.com/ome/omero-web) virtual environment!
+> If not told otherwise, these commands should be run in your [omero-web](https://github.com/ome/omero-web) virtual environment!
+> {style="note"}
 
 ### Step 1 - Clone the repository
 Clone the repository and navigate to the folder:
@@ -29,17 +30,28 @@ Install the required python libraries using the requirements.txt:
 pip install -r requirements.txt
 ```
 
-### Step 4 - Setup podman socket
-If not done before, you will need to activate a user systemd socket for podman to work:
+### Step 4 - Setup podman
+J2O relies on podman to launch containers. Install it and activate a user systemd socket **as the root user**:
 
 ```bash
+apt-get update
+apt-get -y install podman
 systemctl --user enable --now podman.socket
+```
+>GPU acceleration requires podman 4.1 or higher. Ubuntu 22.04 does not provide this. Check the [GPU acceleration section](GPU-acceleration.md) to learn more!
+{style="warning"}
+ 
+If you get errors with podman after the installation, the cause may be that the omero-web user can't run podman. A possible solution is to add the omero-web user to the podman group:
+
+```bash
+sudo usermod -aG podman omero-web
 ```
 
 ### Step 5 - Setup redis as cache backend
 >You may ignore this step if you have redis already setup as your caching backend
+{style="note"}
 
-First, install redis-server and start the service as the root user:
+First, install redis-server and start the service **as the root user**:
 ```bash
 apt-get install -y redis-server
 service redis-server start
@@ -48,20 +60,22 @@ Then, as the omero-web system user, edit the omero cache config to point to your
 ```bash
 omero config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache", "LOCATION": "redis://127.0.0.1:6379/0"}}'
 ```
-⚠️ **Be sure your omero setup does not depend on other caching methods** ⚠️
+> Be sure your omero setup does not depend on other caching methods
+{style="warning"}
 
 ### Step 6 - Edit OMERO config
 
-Add "J2O" to the list of installed apps using [omero-web](https://github.com/ome/omero-web):
+Add "J2O" to the list of installed apps using:
 ```bash
 omero config append omero.web.apps '"J2O"'
 ```
 
-Add the plugin to the right panel plugins using [omero-web](https://github.com/ome/omero-web):
+Add the plugin to the right panel plugins using:
 ```bash
 omero config append omero.web.ui.right_plugins '["J2O", "J2O/right_plugin_example.js.html", "jipipe_form_container"]'
 ```
-⚠️ **Be sure not to add anything twice!** ⚠️
+> Be sure not to add anything twice!
+{style="warning"}
 
 ### Step 7 - Start a Celery worker
 Start a celery worker to manage started tasks:
@@ -74,7 +88,8 @@ Should you wish to terminate the workers associated with the plugin, simply run 
 celery -A JIPipePlugin control shutdown
 ```
 
-> If you want to control the resources used by J2O, don't forget to [set the concurrency flag when starting the worker](Optional-settings.md#task-concurrency).
+> If you want to control the resources used by J2O, don't forget to [set the concurrency flag when starting the worker](Task-concurrency.md).
+{style="note"}
 
 ### Step 8 - Restart omero web
 Restart [omero-web](https://github.com/ome/omero-web) for the changes to take effect:

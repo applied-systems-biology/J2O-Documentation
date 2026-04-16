@@ -48,14 +48,19 @@ When checking **Enable output config** in the [file selection](#file-selection),
 ## PARAMETER CONFIGURATION
 This section contains the input fields of the parameters that are defined as reference parameters within the workflow file. Starting with JIPipe 6, nodes with a predefined set of valid options will have a dropdown menu to choose a value from. Other nodes will accept strings, integers or floats as input depending on the node type. When **hovering the ?**, the plugin will display a tooltip with the description of the respective parameter if it was set in the workflow's [project overview](https://jipipe.hki-jena.de/documentation/project-overview.html).
 
-Below this section you will find the **Start J2O** button to execute the selected workflow file with all the changes you made in the webclient.
-
 ![Parameter config section](ParameterConfigSection.png)
 
-## WARNINGS & ERRORS
-To make warnings and errors clearly visible, a yellow warning box above and a red error box below the **Start J2O** button will be displayed if anything is out of order.
+## START J2O
+Below the aforementioned sections, you will find the **Start J2O** button to execute the selected workflow file with all the changes you made in the webclient.
 
-![Warnings and Errors](Warnings&Errors.png){width="700"}
+To make warnings and errors clearly visible, a yellow warning box above and a red error box below the button will be displayed if anything is out of order.
+
+![Warnings and Errors](StartButtonSection.png){width="700"}
+
+If [setup by your system administrator](GPU-acceleration.md), you can check the GPU acceleration to utilize GPUs for processing your workflow.
+
+> Only enable GPU acceleration if your workflow needs it. Each workflow that is assigned a GPU will reserve it for the remainder of the workflow execution.
+{style="note"}
 
 ## LOG WINDOW
 Below the start button, you will find the log window. The window will livestream the JIPipe logfile of the most recently started workflow execution. This can be used to check on the progress of the execution or to debug problems within the workflow.

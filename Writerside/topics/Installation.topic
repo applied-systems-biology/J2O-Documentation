@@ -29,6 +29,7 @@
 
         <primary>
             <title>After the installation</title>
+            <a href="Optional-settings.md" summary="Set resource limits and paths for J2O"/>
             <a href="User-guide.topic" summary="Check the user guide to learn how to use J2O">Everything works?</a>
             <a href="Troubleshooting.md" summary="Check the troubleshooting page">Getting errors?</a>
         </primary>

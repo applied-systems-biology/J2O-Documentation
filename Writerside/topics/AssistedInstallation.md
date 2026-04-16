@@ -2,7 +2,7 @@
 
 To ease the installation process of the plugin, a bash script is provided in the repository. In case of errors, check the [guide for manual installation](ManualInstallationGuide.md).
 
-This plugin assumes that [omero-web](https://github.com/ome/omero-web) has been setup as described in its [documentation](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment). 
+This plugin assumes that OMERO has been **setup for Ubuntu** as described in its [documentation](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment). 
 
 ### Step 1 - Clone the repository
 Clone the repository and navigate to the folder:
@@ -11,25 +11,44 @@ git clone https://asb-git.hki-jena.de/MWank/OMERO_JIPipe_Plugin.git
 cd OMERO_JIPipe_Plugin
 ```
 
-### Step 2 - Setup redis as cache backend
->You may ignore this step if you have redis already setup as your caching backend
+### Step 2 - Setup podman
+J2O relies on podman to launch containers. Install it and activate a user systemd socket **as the root user**:
 
-First, install redis-server and start the service:
+```bash
+apt-get update
+apt-get -y install podman
+systemctl --user enable --now podman.socket
+```
+>GPU acceleration requires podman 4.1 or higher. Ubuntu 22.04 does not provide this. Check the [GPU acceleration section](GPU-acceleration.md) to learn more!
+{style="warning"}
+
+If you get errors with podman after the installation, the cause may be that the omero-web user can't run podman. A possible solution is to add the omero-web user to the podman group:
+
+```bash
+sudo usermod -aG podman omero-web
+```
+
+
+### Step 3 - Setup redis as cache backend
+>You may ignore this step if you have redis already setup as your caching backend
+{style="note"}
+
+First, install redis-server and start the service **as the root user**:
 ```bash
 apt-get install -y redis-server
 service redis-server start
 ```
-Then, **as the omero-web user**, edit the omero cache config to point to your redis server location:
+Then, **as the omero-web user**, edit the omero cache config to point to your redis server location.
 
-⚠️ **Be sure your omero setup does not depend on other caching methods** ⚠️
+> Be sure your omero setup does not depend on other caching methods
+{style="warning"}
 
 ```bash
 omero config set omero.web.caches '{"default": {"BACKEND": "django_redis.cache.RedisCache", "LOCATION": "redis://127.0.0.1:6379/0"}}'
 ```
 
-
-### Step 3 - Install J2O to OMERO
-Run the bash script as root:
+### Step 4 - Install J2O to OMERO
+Run the bash script **as root**:
 ```bash
 bash installJ2O.sh
 ```

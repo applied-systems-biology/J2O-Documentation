@@ -3,6 +3,7 @@
 This page covers common issues that can arise during installation or usage of J2O.
 
 > If you can't find your issue here, feel free to contact us or open an issue in the [community](https://image.sc).
+{style="tip"}
 
 ## Error starting JIPipe task
 
