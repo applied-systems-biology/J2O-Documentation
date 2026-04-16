@@ -67,3 +67,21 @@ This error can occur when the name of the file you are exporting is too long. In
 ### Solution 1: Change the file name creation in the workflow
 
 We recommend building you filenames using the JIPipe annotation system. If you use the auto_file_name expression, consider replacing it with a manual concatenation of annotations, as the auto_file_name function uses all annotation and can end up creating a too long name, especially when annotations include nested structures. If you are already using a manual concatenation of annotations, check the length of the annotation string. If some annotations are too long, consider not including them in the filename. If you are using a lot of annotations, consider only using the smallest possible set to identify your data. If you are worried about loosing information by this, consider exporting the annotations as a CSV file instead. 
+
+## JIPipe artifacts directory does not exist
+
+In a well setup OMERO environment this error shouldn't occur. It means that the artifact directory that 
+is used to save JIPipe artifacts and reduce container startup time does not exist and can't be created 
+by the omero-web user. 
+
+### Solution 1: Manually create directory and transfer ownership
+The directory should be at ~/.local/share/JIPipe/artifacts of the omero-web user. If for some reason the permissions are not setup correctly, system administrators can create the directory manually **as root** and transfer ownership to the omero-web user:
+
+```bash
+sudo mkdir -p /home/omero-web/.local/share/JIPipe/artifacts 
+sudo chown -R omero-web:omero-web /home/omero-web/.local/share/JIPipe/artifacts 
+```
+
+> Make sure to adapt this command to the actual user running the omero web instance. omero-web is just the standard name used in the omero web documentation.
+{style="warning"}
+

@@ -2,7 +2,7 @@
 
 This section describes optional settings that can be used by system administrators to customize their J2O installation.
 
-## Changing log and data storage paths
+## Changing data storage paths
 J2O by default uses the home directory of the omero-web user to handle temporary file transfers (e.g. /home/omero-web/j2o-files). You can change these directories using these commands:
 
 ```bash
