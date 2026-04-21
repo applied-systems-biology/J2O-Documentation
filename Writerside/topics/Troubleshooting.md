@@ -100,6 +100,9 @@ stat -fc %T /sys/fs/cgroup
 
 If you see v2, and it's still not working, go to [solution 2](Troubleshooting.md#solution-2-check-cpu-and-memory-delegation). If you see v1, you need to switch to v2. There may be a different process for each OS.
 
+> Remember to restart your OS to apply changes!
+{style="warning"}
+
 ### Solution 2: Check CPU and memory delegation
 
 If v2 is set up but the limits are still not enforced, you can check if the CPU and memory are being delegated:
@@ -119,5 +122,8 @@ sudo tee /etc/systemd/system/user@.service.d/delegate.conf <<EOF
 Delegate=cpu memory pids
 EOF
 ```
+
+> Remember to restart WSL to apply changes!
+{style="warning"}
 
 
