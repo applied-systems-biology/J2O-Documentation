@@ -6,15 +6,17 @@ The CPU usage needs to be limited using the podman options for cpu_period and cp
 {style="warning"}
 
 ## CPU period
-The CPU period determines the length of the CPU scheduling window in µs. Per default, the scheduling time is set to be 100000 (100ms). If you would like to change that value, use the corresponding OMERO config command. For example, to set the CPU period to 100ms:
+The CPU period determines the length of the CPU scheduling window in µs. Per default, no scheduling time is set, which likely causes the OS to default to 100ms. If you would like to change that value, use the corresponding OMERO config command. For example, to set the CPU period to 200ms:
 
 ```bash
-omero config set omero.web.jipipe.cpu_period 100000
+omero config set omero.web.jipipe.cpu_period 200000
 ```
 
 ## CPU quota
-The CPU quota determines how much CPU time a process can use in the given CPU period. Per default, this will be set to 200000 (200ms). Together with the default 100ms CPU period, this effectively limits the CPU processing power per task to 2 CPU cores. To change the CPU quota per task, use the corresponding OMERO config command. For example, to set the CPU quota to 200ms:
+The CPU quota determines how much CPU time a process can use in the given CPU period. Per default, this is not set. To change the CPU quota per task, use the corresponding OMERO config command. For example, to set the CPU quota to 200ms:
 
 ```bash
 omero config set omero.web.jipipe.cpu_quota 200000
 ```
+
+> With the default 100ms scheduling time, a quota of 200ms effectively results in 2 cores being used per task.
