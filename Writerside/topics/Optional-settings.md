@@ -16,6 +16,9 @@ The defined paths don't have to exist yet but will be created by the omero-web u
 {style="warning"}
 
 ## Resource management
+> Resource management is only supported for cgroupsv2! Check the [troubleshooting page](Troubleshooting.md#resource-limits-are-not-enforced) if you run into issues.
+{style="warning"}
+
 A major concern system administrators have when hearing about J2O is that using the database server for processing will eat up resources needed to facilitate the database operation. To prevent that, J2O offers system administrators optional settings to control the resources used per workflow execution. This includes:
 
 - [](CPU-usage.md)

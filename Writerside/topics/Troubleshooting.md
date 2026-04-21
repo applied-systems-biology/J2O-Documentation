@@ -85,3 +85,39 @@ sudo chown -R omero-web:omero-web /home/omero-web/.local/share/JIPipe/artifacts
 > Make sure to adapt this command to the actual user running the omero web instance. omero-web is just the standard name used in the omero web documentation.
 {style="warning"}
 
+
+## Resource limits are not enforced
+
+The resource limit options provided by J2O are only enforced when cgroups v2 is used on the host system. 
+
+### Solution 1: Check if cgroupsv2 is active on the host system and switch version if necessary
+
+To check cgroups version run the following command on the host:
+
+```bash
+stat -fc %T /sys/fs/cgroup
+```
+
+If you see v2, and it's still not working, go to [solution 2](Troubleshooting.md#solution-2-check-cpu-and-memory-delegation). If you see v1, you need to switch to v2. There may be a different process for each OS.
+
+### Solution 2: Check CPU and memory delegation
+
+If v2 is set up but the limits are still not enforced, you can check if the CPU and memory are being delegated:
+
+```bash
+cat /sys/fs/cgroup/user.slice/cgroup.controllers
+```
+
+If this command shows cpu and memory everything should be working. **If it does not work anyway, please contact us.**
+
+Should cpu and memory be missing, you are probably running your server using WSL2. For WSL2, the delegation can be changed using:
+
+```bash
+sudo mkdir -p /etc/systemd/system/user@.service.d
+sudo tee /etc/systemd/system/user@.service.d/delegate.conf <<EOF
+[Service]
+Delegate=cpu memory pids
+EOF
+```
+
+
