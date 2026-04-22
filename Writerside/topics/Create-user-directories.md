@@ -2,7 +2,10 @@
 
 J2O utilizes JIPipe user directories to facilitate saving processed data to OMERO and using OMERO image data as input for custom scripts or expression nodes.
 
-> To create user directories, navigate to the project overview and click the "Directories" button and select "Add new directory".
+> To create user directories, navigate to the project overview and click the "Directories" or "User paths" button (depending on your version of JIPipe) and select "Add new directory".
+
+
+![User directories button](UserPaths.png){width="700"}
 
 ## Output directories
 

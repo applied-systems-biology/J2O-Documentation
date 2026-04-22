@@ -22,14 +22,15 @@
         </description>
 
         <spotlight>
-            <card href="Create-user-directories.md" badge="folder" summary="J2O requires your workflow to have at least one output directory">Create user directories</card>
-            <card href="Reference-parameters.md" badge="settings" summary="Learn how to let your users configure parameters from within OMERO">Make your workflow customizable</card>
+            <card href="Create-user-directories.md" badge="folder" summary="J2O requires your workflow to have at least one output directory to store data back to OMERO">Create user directories</card>
+            <card href="Data-hierarchy.md" badge="data" summary="Understand the data structure OMERO imposes on J2O">Check data hierarchy compatibility</card>
         </spotlight>
 
         <primary>
             <title>Further reads</title>
             <a href="Input-nodes.md" summary="Only certain nodes are supported for OMERO inputs">Check input nodes</a>
             <a href="Export-nodes.md" summary="Only certain nodes are supported to export data to OMERO">Check export nodes</a>
+            <a href="Reference-parameters.md" summary="Learn how to let your users configure parameters from within OMERO">Make your workflow customizable</a>
             <a href="User-interface.md" summary="Once you are done preparing your workflow, learn about the UI">Get to know the user interface</a>
         </primary>
 

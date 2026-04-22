@@ -3,6 +3,8 @@ Here you will find an overview of all supported nodes to import your OMERO data 
 
 > It is recommended to give your input nodes custom names to help users identify their purpose!
 
+> Check the [data hierarchy section](Data-hierarchy.md) to understand the folder structure created by each node and the implications for filtering!
+{style="note"}
 
 ## Image input
 To use your OMERO image data as input for workflows executed with J2O, your workflows need to use one of the following input nodes:
