@@ -14,13 +14,16 @@ After clicking on References, create a group if you have not done so before usin
 
 ![References customization](../images/assets/images/ReferenceCustomization.png){width="700"}
 
+> Parameters of nodes within group nodes cannot be assigned as references as they are immutable!
+{style=warning}
+
 ## Complex parameters
 Certain parameters in JIPipe have a unique data structure, making a general integration impossible. 
 
 
 > If you do add a complex parameter to your references anyway, 
 > J2O will **NOT** give the user an option to change its value.  
-{style="note"}
+{style="warning"}
 
 
 A parameter is considered complex when it has multiple input fields. You can recognize this after adding a parameter
