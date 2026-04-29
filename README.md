@@ -11,8 +11,9 @@ https://www.leibniz-hki.de/en/applied-systems-biology.html \
 HKI-Center for Systems Biology of Infection\
 Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Institute (HKI)\
 Adolf-Reichwein-Straße 23, 07745 Jena, Germany
-This plugin is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.  You are free to share
-See: [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
+
+This project is licensed under the **MIT License**.  
+See the [license file](LICENSE.txt) for details.
 ### Dependencies & Third-Party Tools
 - **Tom Select** (UI select widget)  
   Licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
