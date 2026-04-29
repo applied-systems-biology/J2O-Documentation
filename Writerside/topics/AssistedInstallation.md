@@ -58,4 +58,8 @@ The script will ask for input if you have deviated from the default setup used i
 ### After the installation
 After running the script, the J2O plugin should be available in the OMERO webclient. To check if everything is functioning, first check if the J2O tab appears in the right panel of the webclient. After that, start a small demo workflow to see if Celery, redis and podman are functioning as expected (normally the script checks this as well).
 
+> Be aware that certain features like HCS support, GPU acceleration and resource limitations have to be set separately. Learn how in the [optional settings section](Optional-settings.md)!
+{style=warning}
+
 > If there should be any problems, check the [troubleshooting page](Troubleshooting.md). If you can't find your issue there, feel free to contact us or open an issue in the [community](https://image.sc).You can also check the [FAQ section](Frequently-asked-questions.md) to see if your question has already been answered.
+{style=note}

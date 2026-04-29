@@ -127,3 +127,6 @@ EOF
 {style="warning"}
 
 
+## Choosing screens as input crashes workflow execution
+HCS plates are only accessible if binary access is granted globally or to your OMERO group. This is a server-wide configuration and needs to be changed by your system administrator. This is explained in the [respective optional settings section](Optional-settings.md#enabling-high-content-screen-hcs-plate-access).
+

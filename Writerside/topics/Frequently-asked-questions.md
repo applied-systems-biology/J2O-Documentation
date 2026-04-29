@@ -9,3 +9,7 @@ A major concern system administrators have with J2O is that running image proces
 ## Can I process my data using GPU(s)?
 
 Yes! As long as your server has at least one NVIDIA GPU, system administrators can activate GPU acceleration by following the steps [in the respective section of the optional settings](GPU-acceleration.md).
+
+## Are high content screens (HCS) supported?
+
+Yes! However, the system administrator must provide binary access of plates to your OMERO group in the server config. This is explained in the [respective section of the installation guide](Optional-settings.md#enabling-high-content-screen-hcs-plate-access).

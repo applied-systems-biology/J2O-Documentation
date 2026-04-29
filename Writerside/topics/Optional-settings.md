@@ -2,6 +2,21 @@
 
 This section describes optional settings that can be used by system administrators to customize their J2O installation.
 
+## Enabling high content screen (HCS) plate access
+OMERO by default disables binary access for plates. To enable users to select screen plates as input for J2O, system administrators need to set the binary access on in the OMERO server config. To set **global** access, run the following command **as the OMERO server user**:
+
+```bash
+# Enable HCS/Plate original-file downloads
+omero config set -- omero.policy.binary_access +read,+write,+image,+plate
+# Restart the OMERO server
+omero admin restart
+```
+
+> Read the [official documentation page](https://omero.readthedocs.io/en/v5.6.11-1/sysadmins/config.html) for more info. You can also set these permissions for individual groups!
+
+> This is a server setting, which means the actual OMERO.server instance needs to be restarted for this!
+{style=warning}
+
 ## Changing data storage paths
 J2O by default uses the home directory of the omero-web user to handle temporary file transfers (e.g. /home/omero-web/j2o-files). You can change these directories using these commands:
 
