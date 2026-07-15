@@ -1,4 +1,4 @@
-# Summary
+# What is J2O?
 JIPipe to OMERO (J2O) is a plugin for [omero-web](https://github.com/ome/omero-web) that makes it possible to run [JIPipe](https://jipipe.hki-jena.de/) workflows directly on the server that is hosting the OMERO database. This reduces the need for users to share their data and workflows outside of OMERO, decreasing data transfer.
 
 ![Visual Abstract](../images/assets/images/VisualAbstract_Clean.png){width="700"}
