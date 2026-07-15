@@ -1,7 +1,5 @@
-# What is J2O?
-
-## Summary
-JIPipe to OMERO (J2O) is a plugin for [omero-web](https://github.com/ome/omero-web) that makes it possible to run [JIPipe](https://jipipe.hki-jena.de/) workflows directly on the server that is hosting the OMERO database. This eliminates the need for users to share their data and workflows outside of OMERO and greatly reduces the data traffic.
+# Summary
+JIPipe to OMERO (J2O) is a plugin for [omero-web](https://github.com/ome/omero-web) that makes it possible to run [JIPipe](https://jipipe.hki-jena.de/) workflows directly on the server that is hosting the OMERO database. This reduces the need for users to share their data and workflows outside of OMERO, decreasing data transfer.
 
 ![Visual Abstract](../images/assets/images/VisualAbstract_Clean.png){width="700"}
 
@@ -21,8 +19,8 @@ JIPipe to OMERO (J2O) is a plugin for [omero-web](https://github.com/ome/omero-w
 
 ## Why should I care?
 
-Because imaging data is large and moving it takes time. With J2O, JIPipe workflows run directly where your raw data 
-already lives. 
+Because imaging data is large and moving it takes time. With J2O, JIPipe workflows run
+directly where your raw data already lives. 
 
 For you as an image analyst this means:
 

@@ -10,7 +10,7 @@ Below you will find a detailed explanation of the interface sections you will se
 
 ## FILE SELECTION
 
-J2O will load its content dynamically depending on the file you select at the top of this section. When checking **Enable output config**, the [output node configuration](#output-node-configuration) will be accessible.
+J2O will load its content dynamically depending on the file you select at the top of this section. If set by the workflow author, a short description of the workflow will be displayed.
 
 ![File selection section](FileSelectionSection.png)
 
@@ -26,18 +26,16 @@ You can also **click on the name of a workflow** to open a pop-up window that wi
 
 ![Live log pop-up](LogPopUp.png){width="700"}
 
-## NODE SUMMARY
-In this section you will find an overview of the nodes detected in the associated workflow file. This can be used as a debugging tool to see whether the JIPipe pipeline was constructed correctly according to the [*Preparing JIPipe workflows* section](WorkflowDesign.topic) and J2O therefore automatically detects the right amount of nodes.
-
-![Node summary section](NodeSummarySection.png)
-
 ## INPUT NODE CONFIGURATION
 This section allows you to enter the IDs of the OMERO objects that you want to use as input for specific nodes. **Clicking the input field** will open a scrollable dropdown menu that lists all available objects available to your OMERO group. You can simply click a listed object to add it to the input field. You can also **search for specific objects by typing its name** into the input field. To remove an entry from the input field, click the **✖** next to the ID.
 
 ![Input node config section](InputNodeConfigSection.png)
 
+> High-content screen plates are only eligible for selection if [setup by the system administrator.](Optional-settings.md#enabling-high-content-screen-hcs-plate-access)
+{style="note"}
+
 ## OUTPUT NODE CONFIGURATION
-When checking **Enable output config** in the [file selection](#file-selection), the output configuration becomes available. Here, you can choose a destination project for each of your exporter nodes. The data that is being exported by the node will be saved to the selected project as a dataset. Below the project input, you can enter the name you want the saved dataset to have. 
+In the output configuration section, you can choose a destination project for each of your exporter nodes. The data that is being exported by the node will be saved to the selected project as a dataset. Below the project input, you can enter the name you want the saved dataset to have. 
 
 ![Output node config section](OutputConfigSection.png)
 
@@ -51,7 +49,7 @@ This section contains the input fields of the parameters that are defined as ref
 ![Parameter config section](ParameterConfigSection.png)
 
 ## START J2O
-Below the aforementioned sections, you will find the **Start J2O** button to execute the selected workflow file with all the changes you made in the webclient.
+At the bottom of the plugin, you will find the **Start J2O** button to execute the selected workflow file with all the changes you made in the webclient.
 
 To make warnings and errors clearly visible, a yellow warning box above and a red error box below the button will be displayed if anything is out of order.
 

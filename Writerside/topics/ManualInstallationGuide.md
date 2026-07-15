@@ -10,8 +10,8 @@ This plugin assumes that OMERO has been **set up for Ubuntu** as described in it
 ### Step 1 - Clone the repository
 Clone the repository and navigate to the folder:
 ```bash
-git clone https://asb-git.hki-jena.de/MWank/OMERO_JIPipe_Plugin.git
-cd OMERO_JIPipe_Plugin
+git clone https://github.com/applied-systems-biology/J2O.git
+cd J2O
 ```
 
 ### Step 2 - Install J2O
