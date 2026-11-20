@@ -1,0 +1,4 @@
+# Ignore all hidden (dot) folders, e.g. .idea, .serena
+.*/
+# Keep GitHub workflows and repo configuration tracked
+!.github/
