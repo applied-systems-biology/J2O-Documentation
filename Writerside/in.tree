@@ -29,6 +29,7 @@
             </toc-element>
         </toc-element>
         <toc-element topic="Uploading-workflows-to-OMERO.md"/>
+        <toc-element topic="Uploading-non-image-data-to-OMERO.md"/>
         <toc-element topic="User-interface.md"/>
     </toc-element>
     <toc-element topic="For-Developers.md"/>

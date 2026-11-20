@@ -34,6 +34,9 @@ This section allows you to enter the IDs of the OMERO objects that you want to u
 > High-content screen plates are only eligible for selection if [setup by the system administrator.](Optional-settings.md#enabling-high-content-screen-hcs-plate-access)
 {style="note"}
 
+> If your workflow is provided as a RO-Crate, you can also select "Use original data" to use the data that is stored in the RO-Crate.
+{style="note"}
+
 ## OUTPUT NODE CONFIGURATION
 In the output configuration section, you can choose a destination project for each of your exporter nodes. The data that is being exported by the node will be saved to the selected project as a dataset. Below the project input, you can enter the name you want the saved dataset to have. 
 
